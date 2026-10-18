@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-receipts"
+version = "0.1.0"
+description = "Run a command (usually a coding agent) and write a receipt of what it actually changed."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "skkinnyboii" }]
+dependencies = ["rich>=13"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+receipts = "receipts.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/receipts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
