@@ -4,16 +4,12 @@ Run a command, usually a coding agent, and get a receipt of what it actually did
 which files changed, which commands it says it ran, what it reported for tokens
 and cost, and where its final summary disagrees with the diff.
 
-![receipts demo](docs/demo.gif)
-
-The demo GIF is a placeholder and is still to be recorded.
-
 ## Install
 
 Python 3.11 or newer.
 
 ```bash
-pip install git+https://github.com/skkinnyboii/agent-reciepts
+pip install git+https://github.com/skkinnyboii/agent-receipts
 ```
 
 For development:
